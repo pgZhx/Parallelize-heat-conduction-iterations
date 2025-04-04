@@ -1,0 +1,693 @@
+desc: --time-unit=B --stacks=yes
+cmd: ./Parallel
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=10420032
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=107592
+heap_tree=detailed
+n3: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x48E21A4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x48F2513: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48EFF7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 4096 0x48F0A9E: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 4096 0x48F0A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48BDCB8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 4096 0x48BDCB8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 4096 0x48C8732: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 4096 0x4994A0C: __printf_chk (printf_chk.c:33)
+          n0: 4096 0x109179: main (in /home/n/Lab5/Parallel)
+ n1: 1632 0x40145AB: calloc (rtld-malloc.h:44)
+  n1: 1632 0x40145AB: allocate_dtv (dl-tls.c:370)
+   n1: 1632 0x40145AB: _dl_allocate_tls (dl-tls.c:629)
+    n1: 1632 0x48FA606: allocate_stack (allocatestack.c:429)
+     n1: 1632 0x48FA606: pthread_create@@GLIBC_2.34 (pthread_create.c:655)
+      n1: 1632 0x4852399: parallel_for (in /home/n/Lab5/libparallel.so)
+       n0: 1632 0x10935A: main (in /home/n/Lab5/Parallel)
+ n0: 384 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=16046912
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=165408
+heap_tree=detailed
+n3: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x48E21A4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x48F2513: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48EFF7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 4096 0x48F0A9E: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 4096 0x48F0A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48BDCB8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 4096 0x48BDCB8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 4096 0x48C8732: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 4096 0x4994A0C: __printf_chk (printf_chk.c:33)
+          n0: 4096 0x109179: main (in /home/n/Lab5/Parallel)
+ n1: 1904 0x40145AB: calloc (rtld-malloc.h:44)
+  n1: 1904 0x40145AB: allocate_dtv (dl-tls.c:370)
+   n1: 1904 0x40145AB: _dl_allocate_tls (dl-tls.c:629)
+    n1: 1904 0x48FA606: allocate_stack (allocatestack.c:429)
+     n1: 1904 0x48FA606: pthread_create@@GLIBC_2.34 (pthread_create.c:655)
+      n1: 1904 0x4852399: parallel_for (in /home/n/Lab5/libparallel.so)
+       n0: 1904 0x10935A: main (in /home/n/Lab5/Parallel)
+ n0: 384 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=27776784
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=285680
+heap_tree=detailed
+n2: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x48E21A4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x48F2513: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48EFF7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 4096 0x48F0A9E: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 4096 0x48F0A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48BDCB8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 4096 0x48BDCB8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 4096 0x48C8732: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 4096 0x4994A0C: __printf_chk (printf_chk.c:33)
+          n0: 4096 0x109179: main (in /home/n/Lab5/Parallel)
+ n0: 2288 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=37792544
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=386096
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=46358752
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=476232
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=52487880
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=539096
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=61334032
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=629816
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=67207400
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=690152
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=75196344
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=772064
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=81576792
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=835072
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=91394344
+mem_heap_B=5840
+mem_heap_extra_B=64
+mem_stacks_B=938136
+heap_tree=detailed
+n1: 5840 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 5840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=97053240
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=996224
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=106388304
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=1090616
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=114242472
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=1172544
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=122617936
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=1258480
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=130254104
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=1334520
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=139948880
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=1436224
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=153079016
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=1569232
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=164523824
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=1688288
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=171297792
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=1757832
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=178406696
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=1830608
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=185762568
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=1906152
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=193390008
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=1984400
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=201369872
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=2066136
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=209625288
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=2148960
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=220358280
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=2259136
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=234207896
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=2402960
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=241426584
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=2476856
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=251306736
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=2578296
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=261638976
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=2684232
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=269620792
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=2766144
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=280609856
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=2878792
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=292097696
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=2996568
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=297993256
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=3055280
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=307095024
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=3150304
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=319687800
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=3279424
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=329414912
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=3379096
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=339425080
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=3481808
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=353189664
+mem_heap_B=5840
+mem_heap_extra_B=64
+mem_stacks_B=3620656
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=360294112
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=3694008
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=367522560
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=3768152
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=374884568
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=3845488
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=382845816
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=3927088
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=390582992
+mem_heap_B=6112
+mem_heap_extra_B=72
+mem_stacks_B=4006456
+heap_tree=detailed
+n1: 6112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6112 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=397857128
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4078896
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=405837376
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4160960
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=413952704
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4244144
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=422210688
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4328184
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=435920904
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4471272
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=440288984
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4516072
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=444674472
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4561024
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=449153704
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4607016
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=453658424
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4653184
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=458261520
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4700368
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=462878896
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4747744
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=467507824
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4795256
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=472238224
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4843744
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=476982984
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=4892376
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=481742808
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4941168
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=486603800
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=4990944
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=491480792
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=5041024
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=496460192
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=5092064
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=501451920
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=5143264
+heap_tree=detailed
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=506453880
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=5194640
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=65
+#-----------
+time=511564904
+mem_heap_B=6656
+mem_heap_extra_B=88
+mem_stacks_B=5246944
+heap_tree=detailed
+n1: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6656 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=516785936
+mem_heap_B=5840
+mem_heap_extra_B=64
+mem_stacks_B=5300384
+heap_tree=detailed
+n1: 5840 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 5840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=521930568
+mem_heap_B=6384
+mem_heap_extra_B=80
+mem_stacks_B=5353192
+heap_tree=peak
+n1: 6384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 6384 in 4 places, all below massif's threshold (1.00%)
